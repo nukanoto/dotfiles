@@ -3,6 +3,7 @@ require 'paq' {
   'editorconfig/editorconfig-vim';
   'fannheyward/telescope-coc.nvim';
   'folke/tokyonight.nvim';
+  'folke/trouble.nvim';
   'hoob3rt/lualine.nvim';
   'hrsh7th/cmp-buffer';
   'hrsh7th/cmp-cmdline';
@@ -11,6 +12,7 @@ require 'paq' {
   'hrsh7th/cmp-vsnip';
   'hrsh7th/nvim-cmp';
   'hrsh7th/vim-vsnip';
+  'jose-elias-alvarez/null-ls.nvim';
   'neovim/nvim-lspconfig';
   'nvim-lua/plenary.nvim';
   'nvim-lua/popup.nvim';
@@ -18,9 +20,11 @@ require 'paq' {
   'phaazon/hop.nvim';
   'previm/previm';
   'savq/paq-nvim';
+  'simrat39/rust-tools.nvim';
   'tomlion/vim-solidity';
   'tpope/vim-surround';
   'tyru/open-browser.vim';
   'williamboman/nvim-lsp-installer';
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
+  { 'tami5/lspsaga.nvim', branch = 'nvim6.0' };
 }

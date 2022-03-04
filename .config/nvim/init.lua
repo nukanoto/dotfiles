@@ -2,6 +2,8 @@ require 'global'
 require 'early-settings'
 require 'plugins'
 require 'rc/lsp'
+require 'rc/lspsaga'
+require 'rc/trouble'
 require 'rc/telescope'
 require 'rc/hop'
 require 'rc/cmp'
@@ -47,12 +49,24 @@ vim.api.nvim_win_set_option(0, 'number', true)
 vim.api.nvim_win_set_option(0, 'relativenumber', true)
 
 ikeymap('jj', '<Esc>')
-nkeymap('O', ':<C-u>call append(expand("."))<Cr>j', { noremap = true, silent = true })
+nkeymap('O', 'o<Esc>')
 nkeymap('<Leader>hr', ':%!xxd<Cr> :set filetype=xxd<Cr>') -- Hex read
 nkeymap('<Leader>hw', ':%!xxd -r<Cr> :set binary<Cr> :set filetype=<Cr>') -- Hex write
 nkeymap('<Leader>w', 'zf')
 nkeymap('<Leader>q', 'zd')
-nkeymap('<Leader>h', ':<C-u>noh<Cr>')
+nkeymap('<Leader>h', '<Cmd>noh<Cr>')
+nkeymap('<C-h>', '<C-w>h')
+nkeymap('<C-j>', '<C-w>j')
+nkeymap('<C-k>', '<C-w>k')
+nkeymap('<C-l>', '<C-w>l')
+nkeymap('<A-h>', '<C-w>>')
+nkeymap('<A-j>', '<C-w>+')
+nkeymap('<A-k>', '<C-w>-')
+nkeymap('<A-l>', '<C-w><')
+nkeymap('<Leader>j', '<Cmd>sp<Cr>')
+nkeymap('<Leader>l', '<Cmd>vs<Cr>')
+nkeymap('<Leader>x', '<Cmd>bd<Cr>')
+tkeymap('<C-[>', '<C-\\><C-n>')
 
 vim.cmd[[set shiftwidth=2
 set expandtab]]

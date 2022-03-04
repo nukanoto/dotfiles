@@ -14,3 +14,7 @@ end
 function ikeymap(from, to, opts)
   keymap('i', from, to, opts)
 end
+
+function tkeymap(from, to, opts)
+  keymap('t', from, to, opts)
+end
