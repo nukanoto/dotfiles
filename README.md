@@ -6,8 +6,8 @@ My dotfiles
 # Usage
 ```
 # curl
-curl -L https://raw.githubusercontent.com/vyakusi/dotfiles/master/bin/install.sh | bash
+curl -L https://dot.nukanoto.net/ | bash
 
 # wget
-wget -qO - https://raw.githubusercontent.com/vyakusi/dotfiles/master/bin/install.sh | bash
+wget -qO - https://dot.nukanoto.net/ | bash
 ```
