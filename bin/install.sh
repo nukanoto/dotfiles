@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTPATH=~/dotfiles
-DOTURL='https://github.com/vyakusi/dotfiles'
+DOTURL='https://github.com/nukanoto/dotfiles'
 
 function install_pkg () {
   paru -S $1 --noconfirm
