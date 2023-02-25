@@ -12,4 +12,4 @@ function link_file () {
 ln -s $DOTPATH/config/* ~/.config/
 link_file $DOTPATH/.gitconfig ~/.gitconfig
 link_file $DOTPATH/.gitignore_global ~/.gitignore_global
-link_file $DOTPATH/.config/zsh/.zshenv ~/.zshenv
+link_file $DOTPATH/config/zsh/.zshenv ~/.zshenv
