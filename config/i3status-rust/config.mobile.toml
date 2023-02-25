@@ -9,7 +9,6 @@ format = "{icon} {used}/{total}"
 
 [[block]]
 block = "memory"
-display_type = "memory"
 format_mem = "{mem_used;G}"
 
 [[block]]
