@@ -1,5 +1,5 @@
 require("keymaps")
-require("plugin")
+require("plugins")
 require("indent")
 
 vim.g.python3_host_prog = '/usr/bin/python'
