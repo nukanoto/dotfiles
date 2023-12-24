@@ -9,12 +9,16 @@ local plugins = {
       vim.cmd([[colorscheme tokyonight-night]])
     end
   },
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = require("rc/treesitter")
+  },
   {
     "nvim-lualine/lualine.nvim",
     opts = {
       { "nvim-tree/nvim-web-devicons" }
-    }
+    },
   },
 
   -- other
