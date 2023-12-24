@@ -4,35 +4,6 @@ theme = "semi-native"
 [icons]
 icons = "awesome4"
 
-# [[block]]
-# block = "disk_space"
-# path = "/"
-# info_type = "used"
-# format = "{icon} {used}/{total}"
-# 
-# [[block]]
-# block = "memory"
-# format = " $icon $mem_used.eng(u:B)"
-# 
-# [[block]]
-# block = "cpu"
-# interval = 1
-# 
-# [[block]]
-# block = "load"
-# interval = 1
-# format = "{1m}"
-# 
-# [[block]]
-# block = "sound"
-# 
-# [[block]]
-# block = "time"
-# interval = 60
-# format = "%a %m/%d %R"
-# 
-# icons_format = "{icon}"
-# 
 [[block]]
 block = "disk_space"
 path = "/"
@@ -48,7 +19,7 @@ block = "cpu"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_total_used.eng(u:B) "
+format = " $icon $mem_used.eng(u:B) "
 format_alt = " $icon_swap $swap_used.eng(u:B) "
 
 [[block]]

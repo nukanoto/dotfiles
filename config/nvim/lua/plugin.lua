@@ -1,6 +1,7 @@
 require("rc/lazy")
 
 local plugins = {
+  -- style
   {
     "folke/tokyonight.nvim",
     priority = 100,
@@ -15,10 +16,34 @@ local plugins = {
       { "nvim-tree/nvim-web-devicons" }
     }
   },
+
+  -- other
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" }
   },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {}, -- this is equalent to setup({}) function
+  },
+  {
+    'smoka7/hop.nvim',
+    config = require("rc/hop"),
+    opts = {},
+  },
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    config = require("rc/surround"),
+  },
+  {
+    'nvim-telescope/telescope.nvim',
+    event = "VeryLazy",
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = require("rc/telescope"),
+  },
+
 
   -- lsp
   {
@@ -37,6 +62,15 @@ local plugins = {
       "vim-test/vim-test"
     }
   },
+  {
+    'nvimdev/lspsaga.nvim',
+    event = 'LspAttach',
+    config = require("rc/lspsaga"),
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    }
+  },
+
 
   -- completion
   {
@@ -49,6 +83,7 @@ local plugins = {
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip"
     },
+    event = "VeryLazy",
     config = require("completion")
   },
 

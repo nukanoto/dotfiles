@@ -19,7 +19,7 @@ block = "cpu"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_total_used.eng(u:B) "
+format = " $icon $mem_used.eng(u:B) "
 format_alt = " $icon_swap $swap_used.eng(u:B) "
 
 [[block]]

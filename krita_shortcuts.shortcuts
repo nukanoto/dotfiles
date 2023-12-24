@@ -1,0 +1,12 @@
+[Shortcuts]
+KisToolSelectOutline=S
+KritaShape/KisToolBrush=W
+KritaShape/KisToolMultiBrush=none
+PanTool=Q
+fill_selection_background_color=D
+mirror_canvas=V
+reset_fg_bg=none
+rotate_canvas_right=R
+toggle_fg_bg=none
+view_zoom_in=Z
+view_zoom_out=X
