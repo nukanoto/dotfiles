@@ -20,7 +20,7 @@
           username = (import ./secret.nix).username;
         };
         modules = [
-          ./home.nix
+          ./home
         ];
       };
     };
