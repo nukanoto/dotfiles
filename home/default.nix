@@ -1,14 +1,23 @@
 {
-  username,
   config,
   pkgs,
+  inputs,
   ...
 }:
 {
+  imports = [
+    ./development.nix
+    ./direnv.nix
+    ./git.nix
+    ./neovim
+    ./starship.nix
+    ./zsh.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = username;
-  home.homeDirectory = "/home/${username}";
+  home.username = "nk";
+  home.homeDirectory = "/Users/nk";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -28,14 +37,7 @@
     gh
     nixfmt-rfc-style
     ripgrep
-  ];
-
-  imports = [
-    ./development.nix
-    ./direnv.nix
-    ./git.nix
-    ./neovim.nix
-    ./zsh.nix
+    vscode
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

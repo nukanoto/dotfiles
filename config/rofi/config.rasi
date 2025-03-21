@@ -1,7 +1,0 @@
-@theme "Arc-Dark"
-
-configuration {
-  modi: "window,drun,ssh,combi";
-  font: "JetBrains Mono 10";
-  combi-modi: "window,drun,ssh";
-}

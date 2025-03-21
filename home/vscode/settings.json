@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Tokyo Night",
+    "files.autoSave": "onFocusChange",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape"
+        }
+    }
+}
