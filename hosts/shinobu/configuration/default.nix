@@ -18,8 +18,9 @@
     pkgs.zsh
   ];
 
-  fonts.packages = [
-    pkgs.jetbrains-mono
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    jetbrains-mono
   ];
 
   environment.shells = [ pkgs.zsh ];

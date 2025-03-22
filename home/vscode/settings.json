@@ -1,5 +1,6 @@
 {
     "workbench.colorTheme": "Tokyo Night",
+    "editor.fontFamily": "'JetBrainsMono NF', 'JetBrains Mono', monospace",
     "files.autoSave": "onFocusChange",
     "git.autofetch": true,
     "extensions.experimental.affinity": {
