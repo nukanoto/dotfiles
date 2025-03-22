@@ -15,11 +15,12 @@
       shift + alt - k : yabai -m window --warp north
       shift + alt - l : yabai -m window --warp east
 
-      shift + alt - 1 : yabai -m window --space 1
-      shift + alt - 2 : yabai -m window --space 2
-      shift + alt - 3 : yabai -m window --space 3
-      shift + alt - 4 : yabai -m window --space 4
-      shift + alt - 5 : yabai -m window --space 5
+      # Not to disable SIP
+      # shift + alt - 1 : yabai -m window --space 1
+      # shift + alt - 2 : yabai -m window --space 2
+      # shift + alt - 3 : yabai -m window --space 3
+      # shift + alt - 4 : yabai -m window --space 4
+      # shift + alt - 5 : yabai -m window --space 5
 
       # toggle window native fullscreen
       shift + alt - f : yabai -m window --toggle native-fullscreen
