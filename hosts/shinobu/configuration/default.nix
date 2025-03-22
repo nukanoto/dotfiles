@@ -3,6 +3,7 @@
   imports = [
     ./yabai.nix
     ./skhd.nix
+    ./fix-spotlight.nix
   ];
 
   users.users.nk = {
