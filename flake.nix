@@ -30,7 +30,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./hosts/shinobu/configuration.nix
+            ./hosts/shinobu/configuration
             inputs.home-manager.darwinModules.home-manager
             ./hosts/shinobu/home-manager.nix
           ];

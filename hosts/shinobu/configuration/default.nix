@@ -1,5 +1,10 @@
 { pkgs, inputs, username, ... }:
 {
+  imports = [
+    ./yabai.nix
+    ./skhd.nix
+  ];
+
   users.users.nk = {
     name = username;
     home = "/Users/${username}";
@@ -19,25 +24,27 @@
 
   environment.shells = [ pkgs.zsh ];
 
-  # users = {
-  #   users.nk = {
-  #      home = "/Users/nk";
-  #      name = "nk";
-  #   };
-  # };
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
-
-  # Enable alternative shell support in nix-darwin.
-  # programs.fish.enable = true;
-
-  # Set Git commit hash for darwin-version.
-  # system.configurationRevision = self.rev or self.dirtyRev or null;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 6;
 
-  # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
+  
+  system = {
+    defaults = {
+      NSGlobalDomain.AppleShowAllExtensions = true;
+      finder = {
+        AppleShowAllFiles = true;
+        AppleShowAllExtensions = true;
+      };
+      dock = {
+        autohide = true;
+        show-recents = true;
+        orientation = "bottom";
+      };
+    };
+  };
 }
