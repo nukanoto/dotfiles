@@ -6,5 +6,6 @@ My dotfiles
 # Apply
 
 ```
+# Darwin
 nix run nix-darwin -- switch --flake .#<host-name>
 ```

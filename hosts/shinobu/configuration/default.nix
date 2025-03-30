@@ -1,22 +1,29 @@
-{ pkgs, inputs, username, ... }:
+{
+  pkgs,
+  inputs,
+  username,
+  ...
+}:
 {
   imports = [
-    ./yabai.nix
-    ./skhd.nix
+    # ./yabai.nix
+    # ./skhd.nix
     ./fix-spotlight.nix
   ];
 
-  users.users.nk = {
+  nix.settings.experimental-features = "nix-command flakes";
+
+  nixpkgs.hostPlatform = "aarch64-darwin";
+
+  users.users.${username} = {
     name = username;
     home = "/Users/${username}";
     shell = pkgs.zsh;
   };
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = [
-    pkgs.vim
-    pkgs.zsh
+  environment.systemPackages = with pkgs; [
+    vim
+    zsh
   ];
 
   fonts.packages = with pkgs; [
@@ -24,17 +31,21 @@
     jetbrains-mono
   ];
 
+  environment.variables = rec {
+    XDG_CACHE_HOME = "$HOME/.cache";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
+
+    # Not officially in the specification
+    XDG_BIN_HOME = "$HOME/.local/bin";
+    PATH = [
+      "${XDG_BIN_HOME}"
+    ];
+  };
+
   environment.shells = [ pkgs.zsh ];
 
-  # Necessary for using flakes on this system.
-  nix.settings.experimental-features = "nix-command flakes";
-
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
-  system.stateVersion = 6;
-
-  nixpkgs.hostPlatform = "aarch64-darwin";
-  
   system = {
     defaults = {
       NSGlobalDomain.AppleShowAllExtensions = true;
@@ -49,4 +60,8 @@
       };
     };
   };
+
+  # Used for backwards compatibility, please read the changelog before changing.
+  # $ darwin-rebuild changelog
+  system.stateVersion = 6;
 }

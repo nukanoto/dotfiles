@@ -1,11 +1,12 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    cmake
     gcc
     go
-    nodejs-slim
     nodePackages.pnpm
-    python3
+    nodejs-slim
     poetry
+    python3
   ];
 }

@@ -7,6 +7,7 @@
       default = {
         extensions = with pkgs.vscode-extensions; [
           asvetliakov.vscode-neovim
+          dart-code.flutter
           eamodio.gitlens
           enkia.tokyo-night
           jnoortheen.nix-ide
