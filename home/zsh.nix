@@ -6,6 +6,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     defaultKeymap = "viins";
+    profileExtra = "export PATH=$PATH:$XDG_BIN_HOME";
     shellAliases = {
       cat = "bat";
       grep = "rg";
