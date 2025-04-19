@@ -1,0 +1,7 @@
+[
+    {
+        "key": "space f",
+        "command": "editor.action.formatDocument",
+        "when": "neovim.mode == normal && editorTextFocus"
+    }
+]

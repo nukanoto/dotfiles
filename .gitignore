@@ -1,8 +1,0 @@
-/config/zsh/.zcompdump*
-/config/nvim/.netrwhist
-/config/nvim/plugin/
-/config/sway/config
-/config/i3/config
-/config/i3status-rust/config
-/config/blender/alacritty
-/config/pulse/cookie
