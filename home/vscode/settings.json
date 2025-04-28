@@ -1,7 +1,7 @@
 {
     "workbench.colorTheme": "Tokyo Night",
     "editor.fontFamily": "'JetBrainsMono NF', 'JetBrains Mono', monospace",
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "afterDelay",
     "git.autofetch": true,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
