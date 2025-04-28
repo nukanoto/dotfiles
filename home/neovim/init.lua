@@ -23,7 +23,6 @@ vim.api.nvim_set_option('smartindent', true)
 vim.api.nvim_set_option('clipboard', 'unnamed')
 vim.api.nvim_set_option('scrolloff', 10)
 vim.api.nvim_set_option('splitright', true)
-vim.api.nvim_set_option('termguicolors', true)
 vim.api.nvim_set_option('updatetime', 100)
 vim.api.nvim_win_set_option(0, 'list', true)
 vim.api.nvim_win_set_option(0, 'listchars', 'tab:»-,trail:-,extends:»,nbsp:%')
@@ -31,6 +30,18 @@ vim.api.nvim_win_set_option(0, 'number', true)
 vim.api.nvim_win_set_option(0, 'relativenumber', true)
 
 vim.g.mapleader = " "
+
+-- Transparent background
+vim.opt.termguicolors = true
+vim.opt.winblend = 0 -- ウィンドウの不透明度
+vim.opt.pumblend = 0
+vim.cmd [[
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none
+]]
 
 IKeymap('jj', '<Esc>')
 NKeymap('O', 'o<Esc>')
@@ -51,3 +62,12 @@ NKeymap('<Leader>j', '<Cmd>sp<Cr>')
 NKeymap('<Leader>l', '<Cmd>vs<Cr>')
 NKeymap('<Leader>x', '<Cmd>bd<Cr>')
 TKeymap('<C-[>', '<C-\\><C-n>')
+
+vim.cmd([[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+  highlight NormalNC guibg=none
+  highlight NormalSB guibg=none
+]])
