@@ -7,11 +7,12 @@
     syntaxHighlighting.enable = true;
     defaultKeymap = "viins";
     profileExtra = "export PATH=$PATH:$XDG_BIN_HOME";
-    initExtra = "
+    initContent = "
 bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
+eval \"$(mise activate zsh)\"
 ";
     shellAliases = {
       cat = "bat";
