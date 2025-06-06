@@ -15,6 +15,8 @@
 
   nixpkgs.hostPlatform = "aarch64-darwin";
 
+  system.primaryUser = "nk";
+
   users.users.${username} = {
     name = username;
     home = "/Users/${username}";
