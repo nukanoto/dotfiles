@@ -53,9 +53,9 @@
         AppleShowAllExtensions = true;
       };
       dock = {
-        autohide = true;
+        # autohide = true;
         show-recents = true;
-        orientation = "bottom";
+        orientation = "right";
       };
     };
   };
