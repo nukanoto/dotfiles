@@ -32,6 +32,7 @@
 
   home.packages = with pkgs; [
     bat
+    claude-code
     delta
     eza
     gh
