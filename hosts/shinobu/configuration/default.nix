@@ -53,7 +53,7 @@
         AppleShowAllExtensions = true;
       };
       dock = {
-        # autohide = true;
+        autohide = false;
         show-recents = true;
         orientation = "right";
         mru-spaces = false; # https://www.defaults-write.com/disable-automatically-rearrange-spaces-based-on-recent-use/
