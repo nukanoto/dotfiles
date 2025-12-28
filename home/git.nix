@@ -2,17 +2,20 @@
 {
   programs.git = {
     enable = true;
-    userName = "nukanoto";
-    userEmail = "me@nukanoto.net";
-    lfs.enable = true;
-    extraConfig = {
+    settings = {
+      user = {
+        name = "nukanoto";
+        email = "me@nukanoto.net";
+      };
       init.defaultBranch = "main";
     };
+    lfs.enable = true;
     ignores = [
       "/.claude/"
       "/CLAUDE.md"
       ".envrc"
       ".direnv/"
+      ".zed/"
     ];
   };
 }

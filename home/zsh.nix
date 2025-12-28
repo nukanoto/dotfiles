@@ -6,7 +6,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     defaultKeymap = "viins";
-    profileExtra = "export PATH=$PATH:$XDG_BIN_HOME";
+    profileExtra = "export PATH=$PATH:$XDG_BIN_HOME:$HOME/.cargo/bin";
     initContent = "
 bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
